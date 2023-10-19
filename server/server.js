@@ -7,7 +7,7 @@ const taskRouter = require('./routes/taskRoutes');
 const morgan = require('morgan');
 
 app.use(cors(
-	{origin: ["https://"],
+	{origin: ["https://task-managementapp.vercel.app"],
 	methods: ["POST","GET"],
 	credentials: true}
 ));
