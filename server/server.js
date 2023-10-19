@@ -6,7 +6,11 @@ const authRoutes = require('./routes/authRoutes');
 const taskRouter = require('./routes/taskRoutes');
 const morgan = require('morgan');
 
-app.use(cors());
+app.use(cors(
+	{origin: ["https://"],
+	methods: ["POST","GET"],
+	credentials: true}
+));
 app.use(morgan('dev'));
 app.use(express.json());
 app.use('/auth', authRoutes);
